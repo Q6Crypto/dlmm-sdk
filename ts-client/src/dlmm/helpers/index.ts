@@ -77,6 +77,9 @@ export * from "./rebalance";
 export * from "./strategy";
 export * from "./weight";
 export * from "./weightToAmounts";
+export * from "./token_2022";
+export * from "./math";
+export * from "./u64xu64_math";
 
 export function chunks<T>(array: T[], size: number): T[][] {
   return Array.apply(0, new Array(Math.ceil(array.length / size))).map(

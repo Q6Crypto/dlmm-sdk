@@ -7172,7 +7172,7 @@ export class DLMM {
     return program.account.binArray.all([binArrayLbPairFilter(lbPairPubkey)]);
   }
 
-  private static async processPosition(
+  public static async processPosition(
     program: ClmmProgram,
     lbPair: LbPair,
     clock: Clock,
@@ -7408,7 +7408,7 @@ export class DLMM {
     };
   }
 
-  private static getBinsBetweenLowerAndUpperBound(
+  public static getBinsBetweenLowerAndUpperBound(
     lbPairKey: PublicKey,
     lbPair: LbPair,
     lowerBinId: number,
