@@ -1,12 +1,17 @@
 import { LAMPORTS_PER_SOL, PublicKey } from "@solana/web3.js";
 import { BN } from "@coral-xyz/anchor";
-import IDL from "../dlmm.json";
+import IDL from "../idl/idl.json";
 import Decimal from "decimal.js";
 
 export const LBCLMM_PROGRAM_IDS = {
   devnet: "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
   localhost: "LbVRzDTvBDEcrthxfZ4RL6yiq3uZw8bS6MwtdY6UhFQ",
   "mainnet-beta": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+};
+
+export const ALT_ADDRESS = {
+  "mainnet-beta": "JA5F83HUK9L78Y12TRLCsJZbu3Tv8pCK1GfK8mVNp1sz",
+  devnet: "BD6E8oYV52P829MxDq3sEtqWKJrHh9pDSUHeaWR1jRBs",
 };
 
 export const ADMIN = {
@@ -100,3 +105,7 @@ export const U64_MAX = new BN("18446744073709551615");
 export const MAX_BINS_PER_POSITION = new BN(
   CONSTANTS.find(([k, v]) => v.name == "POSITION_MAX_LENGTH")?.[1].value ?? 0
 );
+
+export enum FunctionType {
+  LiquidityMining = 0,
+}
